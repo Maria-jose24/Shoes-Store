@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Clientes</title>
+    <script src="js/clientes.js"></script>
+    <link rel="stylesheet" href="/css/estilos.css">
+
+
+    <style>
+        #titulo {
+            background-color: #0000ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .tabla-container {
+            overflow-x: auto; /* Esto permite el desplazamiento horizontal si es necesario */
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #add8e6;
+            /* Color de fondo azul claro */
+        }
+
+        .tabla-container table {
+            background-color: #87ceeb;
+            /* Color de fondo azul más claro para la tabla */
+        }
+
+        .tabla-container th,
+        .tabla-container td {
+            border: none;
+        }
+
+        /* Ajuste del modal */
+        .modal-content {
+            width: 100%;
+            max-width: none;
+        }
+
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 100%;
+                margin: 1.75rem auto;
+            }
+
+            .btn-volver {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Title -->
+    <div id="titulo" class="container py-4">
+        <h2>Lista de clientes</h2>
+    </div>
+
+
+    <div class="container">
+        <div class="btn-volver">
+            <button class="btn btn-secondary" onclick="window.location.href='clienteRegistro.html';"
+                type="button">Volver</button>
+        </div>
+    </div>
+
+    <!-- Tabla de Registro -->
+    <div class="tabla-container container">
+        <div class="col-md-4">
+            <label for="filtrar" class="form-label">Filtrar</label>
+            <input type="text" class="form-control" name="filtroCliente" id="filtroCliente" step="1" 
+            onfocusout="filtrarMedico(this);">
+        </div>
+        <table class="table table-hover mt-2" id="cuerpoTablaCliente">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Código del médico</th>
+                    <th scope="col">Identificación</th>
+                    <th scope="col">N° identificación</th>
+                    <th scope="col">Primer nombre</th>
+                    <th scope="col">Segundo nombre</th>
+                    <th scope="col">Primer apellido</th>
+                    <th scope="col">Segundo apellido</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Correo </th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones </th>
+                </tr>
+            </thead>
+            <tbody >
+                <!-- Aquí se mostrarán los datos del cliente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modificar clientes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenido del modal -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success"><i
+                            class="fa-regular fa-floppy-disk"></i>Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
