@@ -39,7 +39,7 @@ body {
     display: flex; /* Usamos flexbox para alinear elementos */
     justify-content: space-between; /* Espacio entre elementos */
     align-items: center; /* Centramos verticalmente */
-    padding-left: 0px; /* Ajuste del padding a la izquierda */
+    padding-left: 10px; /* Ajuste del padding a la izquierda */
     padding-right: 20px; /* Mantenemos el padding a la derecha */
 }
 
