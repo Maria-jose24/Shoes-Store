@@ -46,51 +46,54 @@
             </ul>
         </nav>
     </div>
-    <div class="content">
-        <div class="header">
-            <h1>Clientes</h1>
-            <br>
-            <form>
-                <label for="filter-name">Filtrar por Nombre:</label>
-                <input type="text" id="filter-name" placeholder="Ingrese el nombre" />
-                <!-- Agregué el atributo placeholder con el texto deseado -->
-                <br>
-                <label for="filter-city">Filtrar por Ciudad:</label>
-                <!-- Añadí un atributo for para asociar correctamente la etiqueta con el campo de entrada -->
-                <input type="text" id="filter-city" placeholder="Ingrese la ciudad" />
-                <!-- Agregué el atributo placeholder con el texto deseado -->
-                <br>
-                <label>Filtrar por Estado:</label>
-                <select id="filter-state">
-                    <option value="">Todos</option>
-                    <option value="ACTIVO">Activo</option>
-                    <option value="INACTIVO">Inactivo</option>
-                    <br>
-                </select>
-                <br>
+
+    <div class="header">
+        <h1>Clientes</h1>
+        <br>
+        <form>
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="filter-name">Filtrar por Nombre:</label>
+                    <input type="text" id="filter-name" class="filter-input" placeholder="Ingrese el nombre" />
+                </div>
+                <div class="filter-group">
+                    <label for="filter-city">Filtrar por Ciudad:</label>
+                    <input type="text" id="filter-city" class="filter-input" placeholder="Ingrese la ciudad" />
+                </div>
+                <div class="filter-group">
+                    <label for="filter-state">Filtrar por Estado:</label>
+                    <select id="filter-state" class="filter-input">
+                        <option value="">Todos</option>
+                        <option value="ACTIVO">Activo</option>
+                        <option value="INACTIVO">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-actions">
                 <button class="btn btn-apply-filters" type="submit">Aplicar Filtros</button>
                 <button class="btn btn-clear-filters" type="reset">Limpiar Filtros</button>
-            </form>
-        </div>
+            </div>
+        </form>
+    </div>
 
-        <table id="clientes-table">
-            <thead>
-                <tr>
-                    <th>ID Clientes</th>
-                    <th>Tipo Identificación</th>
-                    <th>N° Identificación</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Teléfono</th>
-                    <th>Dirección</th>
-                    <th>Ciudad</th>
-                    <th>Estado</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <table id="clientes-table">
+        <thead>
+            <tr>
+                <th>ID Clientes</th>
+                <th>Tipo Identificación</th>
+                <th>N° Identificación</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
     </div>
 </body>
 
