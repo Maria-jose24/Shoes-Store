@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    display: block; /* Para asegurarse de que el logo tenga su propio espacio */
+    margin: 0 auto 10px; /* Centrar el logo y agregar un poco de margen debajo */
+}
+
+.logo h2 {
+    color: #fff;
+    margin: 0; /* Eliminar margen superior y inferior */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a span {
+    margin-left: 10px; /* Espacio entre el logo y el texto */
+}
+
+nav ul li a img {
+    width: 40px;
+    height: 40px;
+}
+
+.content {
+    margin-left: 250px; /* Mismo ancho que la barra lateral */
+    padding: 20px;
+}

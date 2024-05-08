@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Shoes Store</title>
+    <link rel="stylesheet" href="./css/listaClientes.css">
+    <link rel="stylesheet" href="./css/styles.css"> 
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="./paginaprincipal.html">
+                <img src="./img/logo.png" alt="Shoes Store">
+                <h2>Shoes Store</h2>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./img/dashboard.png" alt="Dashboard">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaClientes.html">
+                        <img src="./img/usuario.png" alt="Clientes">
+                        <span>Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/productos.png" alt="Productos">
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/ventas.png" alt="Ventas">
+                        <span>Ventas</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ListaClientes - Shoes Store</title>
+        <link rel="stylesheet" href="./css/listaClientes.css">
+        <link rel="stylesheet" href="./css/styles.css"> 
+
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+                <h1>Clientes</h1>
+                <br>
+                <form>
+                    <label>Filtrar por Nombre:</label>
+                    <input type="text" id="filter-name" />
+                    <br>
+                    <label>Filtrar por Ciudad:</label>
+                    <input type="text" id="filter-city" />
+                    <br>
+                    <label>Filtrar por Estado:</label>
+                    <select id="filter-state">
+                        <option value="">Todos</option>
+                        <option value="ACTIVO">Activo</option>
+                        <option value="INACTIVO">Inactivo</option>
+                    </select>
+                    <br>
+                    <button class="btn btn-primary" type="submit">Aplicar Filtros</button>
+                    <button class="btn btn-secondary" type="reset">Limpiar Filtros</button>
+                </form>
+            </div>
+
+        <table id="clientes-table">
+            <thead>
+                <tr>
+                    <th>ID Clientes</th>
+                    <th>Tipo Identificación</th>
+                    <th>N° Identificación</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Ciudad</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
