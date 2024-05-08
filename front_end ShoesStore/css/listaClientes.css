@@ -5,7 +5,8 @@ body {
 }
 
 .content {
-    margin-left: 250px; /* Same width as the sidebar */
+    margin-left: 250px;
+    /* Mismo ancho que la barra lateral */
     padding: 20px;
 }
 
@@ -13,13 +14,25 @@ body {
     background-color: #f0f0f0;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+   
 }
 
 .header h1 {
     margin: 0;
 }
 
-.header button {
+.header form {
+    display: flex;
+    align-items: wrap;
+}
+
+
+.header form label {
+    margin-right: 10px;
+}
+
+
+.header form button {
     margin-right: 10px;
 }
 
@@ -28,7 +41,8 @@ body {
     border-collapse: collapse;
 }
 
-#clientes-table th, #clientes-table td {
+#clientes-table th,
+#clientes-table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
@@ -36,4 +50,23 @@ body {
 
 #clientes-table th {
     background-color: #f0f0f0;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+}
+
+.filter-group>* {
+    margin-right: 10px;
+}
+
+.btn-apply-filters {
+    background-color: blue;
+    color: white;
+}
+
+.btn-clear-filters {
+    background-color: grey;
+    color: white;
 }

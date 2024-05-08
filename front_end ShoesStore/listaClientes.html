@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes - Shoes Store</title>
+    <title>Lista de Clientes - Shoes Store</title>
     <link rel="stylesheet" href="./css/listaClientes.css">
-    <link rel="stylesheet" href="./css/styles.css"> 
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
     <div class="sidebar">
         <div class="logo">
@@ -44,40 +46,32 @@
             </ul>
         </nav>
     </div>
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ListaClientes - Shoes Store</title>
-        <link rel="stylesheet" href="./css/listaClientes.css">
-        <link rel="stylesheet" href="./css/styles.css"> 
-
-    </head>
-    <body>
-        <div class="content">
-            <div class="header">
-                <h1>Clientes</h1>
+    <div class="content">
+        <div class="header">
+            <h1>Clientes</h1>
+            <br>
+            <form>
+                <label for="filter-name">Filtrar por Nombre:</label>
+                <input type="text" id="filter-name" placeholder="Ingrese el nombre" />
+                <!-- Agregué el atributo placeholder con el texto deseado -->
                 <br>
-                <form>
-                    <label>Filtrar por Nombre:</label>
-                    <input type="text" id="filter-name" />
+                <label for="filter-city">Filtrar por Ciudad:</label>
+                <!-- Añadí un atributo for para asociar correctamente la etiqueta con el campo de entrada -->
+                <input type="text" id="filter-city" placeholder="Ingrese la ciudad" />
+                <!-- Agregué el atributo placeholder con el texto deseado -->
+                <br>
+                <label>Filtrar por Estado:</label>
+                <select id="filter-state">
+                    <option value="">Todos</option>
+                    <option value="ACTIVO">Activo</option>
+                    <option value="INACTIVO">Inactivo</option>
                     <br>
-                    <label>Filtrar por Ciudad:</label>
-                    <input type="text" id="filter-city" />
-                    <br>
-                    <label>Filtrar por Estado:</label>
-                    <select id="filter-state">
-                        <option value="">Todos</option>
-                        <option value="ACTIVO">Activo</option>
-                        <option value="INACTIVO">Inactivo</option>
-                    </select>
-                    <br>
-                    <button class="btn btn-primary" type="submit">Aplicar Filtros</button>
-                    <button class="btn btn-secondary" type="reset">Limpiar Filtros</button>
-                </form>
-            </div>
+                </select>
+                <br>
+                <button class="btn btn-apply-filters" type="submit">Aplicar Filtros</button>
+                <button class="btn btn-clear-filters" type="reset">Limpiar Filtros</button>
+            </form>
+        </div>
 
         <table id="clientes-table">
             <thead>
@@ -99,4 +93,5 @@
         </table>
     </div>
 </body>
+
 </html>
