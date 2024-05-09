@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.filter-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    flex: 1 0 30%;
+    margin-bottom: 10px;
+}
+
+.filter-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+.filter-input {
+    width: 40%;
+    /* Cambia el valor según lo que necesites */
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+.input-container {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.filter-actions button {
+    margin-left: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-apply-filters {
+    background-color: blue;
+    color: white;
+}
+
+.btn-clear-filters {
+    background-color: grey;
+    color: white;
+}
+
+#productos-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#productos-table th,
+#productos-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#productos-table th {
+    background-color: #f0f0f0;
+}

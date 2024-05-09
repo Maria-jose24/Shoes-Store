@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Clientes - Shoes Store</title>
-    <link rel="stylesheet" href="./css/listaClientes.css">
+    <title>Lista de Productos - Shoes Store</title>
+    <link rel="stylesheet" href="./css/listaProductos.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -48,7 +48,7 @@
     </div>
     <div class="content">
         <div class="header">
-            <h1>Clientes</h1>
+            <h1>Productos</h1>
             <br>
             <form>
                 <div class="filter-row">
@@ -56,13 +56,6 @@
                         <label for="filter-name">Filtrar por Nombre:</label>
                         <div class="input-container">
                             <input type="text" id="filter-name" class="filter-input" placeholder="Ingrese el nombre"
-                                style="width: 48%; margin-right: 2%; margin-top: 5px;" />
-                        </div>
-                    </div>
-                    <div class="filter-group">
-                        <label for="filter-city">Filtrar por Ciudad:</label>
-                        <div class="input-container">
-                            <input type="text" id="filter-city" class="filter-input" placeholder="Ingrese la ciudad"
                                 style="width: 48%; margin-right: 2%; margin-top: 5px;" />
                         </div>
                     </div>
@@ -79,46 +72,28 @@
                     </div>
                 </div>
                 <div class="filter-actions">
-                    <button class="btn btn-apply-filters" type="submit">Aplicar Filtros</button>
-                    <button class="btn btn-clear-filters" type="reset">Limpiar Filtros</button>
+                    <button class="btn btn-apply-filters" type="submit">Filtrar</button>
                     <button class="btn btn-add-client" style="background-color: rgb(34, 160, 34); color: white;"
-                        type="button" onclick="window.location.href='agregarCliente.html';">Agregar Cliente</button>
+                        type="button" onclick="window.location.href='agregarProducto.html';">Agregar Producto</button>
                 </div>
             </form>
         </div>
-        <table id="clientes-table">
+
+        <table id="productos-table">
             <thead>
                 <tr>
-                    <th>ID Clientes</th>
-                    <th>Tipo Identificación</th>
-                    <th>N° Identificación</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Teléfono</th>
-                    <th>Dirección</th>
-                    <th>Ciudad</th>
+                    <th>ID Productos</th>
+                    <th>Nombre Producto</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>% IVA</th>
+                    <th>% Descuento</th>
                     <th>Estado</th>
-                    <th>Acciones</th> 
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>DNI</td>
-                    <td>12345678</td>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>1234567890</td>
-                    <td>123 Main St</td>
-                    <td>City</td>
-                    <td>Activo</td>
-                    <td>
-                        <button class="btn btn-edit" type="button">Editar</button>
-                        <button class="btn btn-activate" type="button">Activar</button>
-                        <button class="btn btn-deactivate" type="button">Desactivar</button>
-                        <button class="btn btn-delete" type="button">Eliminar</button>
-                    </td>
-                </tr>
             </tbody>
         </table>
     </div>

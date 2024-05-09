@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    /* Se ha aumentado el ancho máximo */
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    /* Se han igualado los tamaños de los campos */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-volver {
+    background-color: #007bff;
+    /* Azul */
+    color: white;
+}
+
+.btn-agregar {
+    background-color: rgb(34, 160, 34); /* Verde */
+    color: white;
+}
+
+.btn-lista {
+    background-color: #007bff;
+    /* Azul */
+    color: white;
+}
+
+.btn-separator {
+    margin-right: 10px;
+}
