@@ -69,8 +69,8 @@
 
             <div class="col-md-4">
                 <label for="numero_documento" class="form-label">Número de identificación:</label>
-                <input type="number" class="form-control" name="numero_documento" id="numero_documento" step="1"
-                    onfocusout="validarNumeroDocumento(this);">
+                <input type="text" class="form-control" name="numero_documento" id="numero_documento"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             </div>
 
             <div class="col-md-4">
@@ -110,22 +110,21 @@
                 </select>
             </div>
         </div>
-        <div class="col-12 mt-3">
-            <div class="row justify-content-center">
-                <div class="col-md-auto">
-                    <button class="btn btn-volver btn-separator" onclick="window.location.href='paginaprincipal.html';"
-                        type="button">Volver</button>
-                </div>
-                <div class="col-md-auto">
-                    <button class="btn btn-agregar btn-separator" type="button" onclick="registrarClientes();">Agregar
-                        Cliente</button>
-                </div>
-                <div class="col-md-auto">
-                    <button class="btn btn-lista btn-separator" onclick="window.location.href='listaClientes.html';"
-                        type="button">Lista de
-                        Clientes</button>
-                </div>
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <button class="btn btn-volver btn-separator" onclick="window.location.href='paginaprincipal.html';"
+                    type="button">Volver</button>
+            </div>
+            <div class="col-md-auto">
+                <button class="btn btn-agregar btn-separator" type="button" onclick="registrarClientes();">Agregar
+                    Cliente</button>
+            </div>
+            <div class="col-md-auto">
+                <button class="btn btn-lista btn-separator" onclick="window.location.href='listaClientes.html';"
+                    type="button">Lista de
+                    Clientes</button>
             </div>
         </div>
+    </div>
     </div>
 </body>

@@ -6,32 +6,43 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
+    min-width: 320px;
     width: 100%;
     max-width: 800px;
-    /* Se ha aumentado el ancho máximo */
     margin: 0 auto;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
+#titulo {
+    text-align: left;
 }
 
-.form-group {
+h2 {
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 15px;
-    width: 100%;
+}
+
+.col-md-4 {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 10px;
+}
+
+/* Establece el margen derecho en 0 para la última columna */
+.col-md-4:last-child {
+    margin-right: 0;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
     font-weight: bold;
 }
 
@@ -39,38 +50,62 @@ input[type="text"],
 input[type="tel"],
 select {
     width: 100%;
-    /* Se han igualado los tamaños de los campos */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
 }
 
-input[type="submit"] {
+#numero_documento {
+    width: 100%;
+}
+
+.col-12 {
+    text-align: center;
+}
+
+.btn {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    margin-right: 10px;
 }
 
 .btn-volver {
     background-color: #007bff;
-    /* Azul */
     color: white;
 }
 
 .btn-agregar {
-    background-color: rgb(34, 160, 34); /* Verde */
+    background-color: rgb(34, 160, 34);
     color: white;
 }
 
 .btn-lista {
     background-color: #007bff;
-    /* Azul */
     color: white;
 }
 
-.btn-separator {
-    margin-right: 10px;
+/* Modificaciones para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .col-md-4 {
+        flex: 0 0 calc(100% - 20px);
+    }
+
+    .col-md-4:last-child {
+        margin-right: 0;
+    }
+
+    label,
+    input[type="text"],
+    input[type="tel"],
+    select {
+        width: 100%;
+    }
 }
