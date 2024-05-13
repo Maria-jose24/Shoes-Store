@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Ventas - Shoes Store</title>
+    <link rel="stylesheet" href="./css/listaVenta.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/agregarVentas.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="./paginaprincipal.html">
+                <img src="./img/logo.png" alt="Shoes Store">
+                <h2>Shoes Store</h2>
+            </a>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./img/dashboard.png" alt="Dashboard">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaClientes.html">
+                        <img src="./img/usuario.png" alt="Clientes">
+                        <span>Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaProducto.html">
+                        <img src="./img/productos.png" alt="Productos">
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaVenta.html">
+                        <img src="./img/ventas.png" alt="Ventas">
+                        <span>Ventas</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div id="titulo" class="container py-4">
+            <h2>Agregar una nueva venta</h2>
+        </div>
+
+        <!-- Formulario -->
+        <div id="formulario" class="container mt-5">
+            <form id="formulario-venta">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="ID_Venta" class="form-label">ID de Venta:</label>
+                        <input type="text" class="form-control" name="ID_Venta" id="ID_Venta">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="ID_Cliente" class="form-label">ID de Cliente:</label>
+                        <input type="text" class="form-control" name="ID_Cliente" id="ID_Cliente">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="total" class="form-label">Total:</label>
+                        <input type="text" class="form-control" name="total" id="total">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="fecha_venta" class="form-label">Fecha de Venta:</label>
+                        <input type="text" class="form-control" name="fecha_venta" id="fecha_venta_input" readonly>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="estado" class="form-label">Estado:</label>
+                        <select class="form-select" id="estado">
+                            <option selected disabled value="">Selecciona el estado:</option>
+                            <option value="Borrador">Borrador: permite modificar la información de la factura, productos
+                                y cantidades.</option>
+                            <option value="Cancelada">Cancelada: El administrador cancela la factura.</option>
+                            <option value="Pendiente pago">Pendiente pago: Venta finalizada y que no se ha finalizado el
+                                pago.</option>
+                            <option value="Pagada">Pagada: Venta pagada y de descuenta las cantidades de los productos
+                                seleccionados.</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <button class="btn btn-volver btn-separator"
+                            onclick="window.location.href='paginaprincipal.html';" type="button">Volver</button>
+                    </div>
+                    <div class="col-md-auto">
+                        <button class="btn btn-agregar btn-separator" type="button" onclick="agregarVenta();">Agregar
+                            Venta</button>
+                    </div>
+                    <div class="col-md-auto">
+                        <button class="btn btn-lista btn-separator" onclick="window.location.href='listaVenta.html';"
+                            type="button">Lista de
+                            Ventas</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        /* Tu CSS personalizado */
+    </style>
+
+    <script>
+        $(function () {
+            // Inicializar el DatePicker en el input de fecha
+            $("#fecha_venta_input").datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        });
+    </script>
+</body>
+
+</html>

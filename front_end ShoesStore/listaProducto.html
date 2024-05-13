@@ -7,6 +7,9 @@
     <title>Lista de Productos - Shoes Store</title>
     <link rel="stylesheet" href="./css/listaProductos.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -38,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="./listaVenta.html">
                         <img src="./img/ventas.png" alt="Ventas">
                         <span>Ventas</span>
                     </a>
@@ -73,7 +76,7 @@
                 </div>
                 <div class="filter-actions">
                     <button class="btn btn-apply-filters" type="submit">Filtrar</button>
-                    <button class="btn btn-add-client" style="background-color: rgb(34, 160, 34); color: white;"
+                    <button class="btn btn-add-product" style="background-color: rgb(34, 160, 34); color: white;"
                         type="button" onclick="window.location.href='agregarProducto.html';">Agregar Producto</button>
                 </div>
             </form>
@@ -94,9 +97,54 @@
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jabon</td>
+                    <td>Jabon para lavar manos y pies</td>
+                    <td>2</td>
+                    <td>2000</td>
+                    <td>100</td>
+                    <td>5</td>
+                    <td>Activo</td>
+                    <td>
+                        <div class="icon-container">
+                            <div class="icon edit-icon"><i class="fas fa-edit" style="color: blue;"></i></div>
+                            <div class="icon delete-icon"><i class="fas fa-trash-alt" style="color: red;"></i></div>
+                            <div class="icon disable-icon"><i class="fas fa-toggle-on" style="color: blue;"></i></div>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
-    </div>
+
+        <script>
+            // Función para agregar una nueva fila de producto
+            function agregarNuevoProducto() {
+                const tableBody = document.querySelector('#productos-table tbody');
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                <td>2</td>
+                <td>Producto 2</td>
+                <td>Descripción del producto 2</td>
+                <td>10</td>
+                <td>$50</td>
+                <td>10%</td>
+                <td>5%</td>
+                <td>Activo</td>
+                <td>
+                    <div class="icon-container">
+                        <div class="icon edit-icon"><i class="fas fa-edit" style="color: blue;"></i></div>
+                        <div class="icon delete-icon"><i class="fas fa-trash-alt" style="color: red;"></i></div>
+                        <div class="icon disable-icon"><i class="fas fa-toggle-on" style="color: blue;"></i></div>
+                    </div>
+                </td>
+            `;
+                tableBody.appendChild(newRow);
+            }
+
+            // Llamamos a la función para agregar el nuevo producto
+            agregarNuevoProducto();
+        </script>
 </body>
 
 </html>

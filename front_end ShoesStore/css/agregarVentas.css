@@ -1,5 +1,8 @@
+/* CSS personalizado */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -15,21 +18,17 @@ body {
     top: 0;
     left: 0;
     background-color: #333;
-    /* Color del panel lateral */
     padding-top: 20px;
 }
 
 .main-content {
     margin-left: 250px;
-    /* Ajuste del margen izquierdo */
     padding-left: 20px;
-    /* Espacio adicional para evitar superposiciones */
 }
 
 #titulo {
     text-align: left;
     margin-top: 30px;
-    /* Mover el título hacia abajo */
 }
 
 h2 {
@@ -42,9 +41,7 @@ h2 {
     justify-content: space-between;
     margin-bottom: 15px;
     margin-top: 20px;
-    /* Agregamos un margen superior */
 }
-
 
 .col-md-6 {
     flex: 0 0 calc(50% - 20px);
@@ -58,25 +55,20 @@ h2 {
 label {
     font-weight: bold;
     margin-bottom: 5px;
-    /* Aumentamos un margen inferior */
 }
 
-
 input[type="text"],
-input[type="tel"],
+input[type="number"],
+input[type="date"],
 select {
-    width: calc(100% - 20px); /* Ajustar el ancho teniendo en cuenta el padding */
-    /*width: 90%;*/
-    /* Reducimos el ancho al 90% del contenedor */
+    width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     margin-top: 5px;
     margin-bottom: 20px;
-    /*Se agrega una margen superior*/
 }
-
 
 .col-12 {
     text-align: center;
@@ -106,7 +98,6 @@ select {
     color: white;
 }
 
-/* Modificaciones para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .container {
         padding: 10px;
@@ -122,7 +113,8 @@ select {
 
     label,
     input[type="text"],
-    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
     select {
         width: 100%;
     }

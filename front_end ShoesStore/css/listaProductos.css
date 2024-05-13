@@ -1,5 +1,20 @@
+/* Variables */
+:root {
+    --primary-color: #f0f0f0;
+    --secondary-color: #ddd;
+    --accent-color: blue;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
 .content {
@@ -8,9 +23,9 @@ body {
 }
 
 .header {
-    background-color: #f0f0f0;
+    background-color: var(--primary-color);
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 .header h1 {
@@ -29,25 +44,10 @@ body {
     margin-bottom: 10px;
 }
 
-.filter-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-
-
 .filter-input {
-    width: 40%;
-    /* Cambia el valor según lo que necesites */
+    width: 100%;
     padding: 5px;
     box-sizing: border-box;
-}
-
-
-.input-container {
-    margin-top: 5px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .filter-actions {
@@ -58,38 +58,58 @@ body {
 }
 
 .filter-actions button {
-    margin-left: 10px;
-}
-
-.btn {
-    padding: 10px 20px;
+    margin-left: 5px;
+    padding: 8px 12px;
+    /* Ajuste del padding para reducir el tamaño de los botones */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
 }
 
-.btn-apply-filters {
-    background-color: blue;
+.btn-apply-filters,
+.btn-clear-filters,
+.btn-add-product {
+    background-color: var(--accent-color);
     color: white;
 }
 
-.btn-clear-filters {
-    background-color: grey;
+.btn-delete {
+    background-color: red;
     color: white;
+}
+
+/* Agregar colores de fila alternos */
+#productos-table tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+#productos-table tbody tr:nth-child(odd) {
+    background-color: #ccc;
 }
 
 #productos-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 #productos-table th,
 #productos-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    padding: 8px;
     text-align: left;
 }
 
 #productos-table th {
-    background-color: #f0f0f0;
+    background-color: var(--primary-color);
+}
+
+/* Estilos para los iconos */
+.icon-container {
+    display: flex;
+}
+
+.icon {
+    margin-right: 5px;
 }

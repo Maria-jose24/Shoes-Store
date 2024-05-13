@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Ventas - Shoes Store</title>
+    <link rel="stylesheet" href="./css/listaVenta.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="./paginaprincipal.html">
+                <img src="./img/logo.png" alt="Shoes Store">
+                <h2>Shoes Store</h2>
+            </a>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./img/dashboard.png" alt="Dashboard">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaClientes.html">
+                        <img src="./img/usuario.png" alt="Clientes">
+                        <span>Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaProducto.html">
+                        <img src="./img/productos.png" alt="Productos">
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaVenta.html">
+                        <img src="./img/ventas.png" alt="Ventas">
+                        <span>Ventas</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Ventas</h1>
+            <br>
+            <form>
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label for="filter-name">Filtrar por Nombre:</label>
+                        <div class="input-container">
+                            <input type="text" id="filter-name" class="filter-input" placeholder="Ingrese el nombre" />
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-date-from">Fecha de Venta - Desde:</label>
+                        <div class="input-container">
+                            <input type="date" id="filter-date-from" class="filter-input" />
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-date-to">Fecha de Venta - Hasta:</label>
+                        <div class="input-container">
+                            <input type="date" id="filter-date-to" class="filter-input" />
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-apply-filters" type="submit">Aplicar Filtros</button>
+                    <button class="btn btn-clear-filters" type="reset">Limpiar Filtros</button>
+                    <button class="btn btn-add-client" style="background-color: rgb(34, 160, 34); color: white;"
+                        type="button" onclick="window.location.href='agregarVenta.html';">Agregar Venta</button>
+                </div>
+            </form>
+        </div>
+        <div class="table-container">
+            <table id="ventas-table">
+                <thead>
+                    <tr>
+                        <th>ID Ventas</th>
+                        <th>ID Clientes</th>
+                        <th>Total</th>
+                        <th>Fecha de Venta</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí irán las filas de la tabla de ventas -->
+                    <tr>
+                        <td>1</td>
+                        <td>123</td>
+                        <td>$100</td>
+                        <td>2024-05-13</td>
+                        <td>Pagado</td>
+                        <td>
+                            <button class="btn btn-ver-detalle">Ver Detalle</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Script para agregar un nuevo registro de venta -->
+    <script>
+        // Función para agregar una nueva fila de venta
+        function agregarNuevaVenta() {
+            const tableBody = document.querySelector('#ventas-table tbody');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>3</td>
+                <td>789</td>
+                <td>$200</td>
+                <td>2024-05-15</td>
+                <td>Pagado</td>
+                <td>
+                    <button class="btn btn-ver-detalle">Ver Detalle</button>
+                </td>
+            `;
+            tableBody.appendChild(newRow);
+        }
+
+        // Llamamos a la función para agregar la nueva venta
+        agregarNuevaVenta();
+    </script>
+</body>
+
+</html>

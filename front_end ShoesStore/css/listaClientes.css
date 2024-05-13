@@ -1,52 +1,67 @@
 /* Variables */
 :root {
-    --primary-color: #f0f0f0;/* Define el color principal */
-    --secondary-color: #ddd;/* Define el color secundario */
-    --accent-color: blue;/* Define el color de acento */
+    --primary-color: #f0f0f0;
+    /* Define el color principal */
+    --secondary-color: #ddd;
+    /* Define el color secundario */
+    --accent-color: blue;
+    /* Define el color de acento */
 }
 
 /* Global Styles */
 * {
-    box-sizing: border-box; /* Establece la caja de modelo de borde para todos los elementos */
-    margin: 0; /* Elimina el margen predeterminado */
-    padding: 0; /* Elimina el relleno predeterminado */
+    box-sizing: border-box;
+    /* Establece la caja de modelo de borde para todos los elementos */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    padding: 0;
+    /* Elimina el relleno predeterminado */
 }
 
 body {
-    font-family: Arial, sans-serif; /* Establece la fuente del cuerpo */
-    background-color: #f0f0f0; /* Establece el color de fondo del cuerpo */
+    font-family: Arial, sans-serif;
+    /* Establece la fuente del cuerpo */
+    background-color: #f0f0f0;
+    /* Establece el color de fondo del cuerpo */
 }
 
 .content {
-    margin-left: 250px; /* Establece el margen izquierdo del contenido */
-    padding: 20px; /* Establece el relleno del contenido */
+    margin-left: 250px;
+    /* Establece el margen izquierdo del contenido */
+    padding: 20px;
+    /* Establece el relleno del contenido */
 }
 
 .header {
-    background-color: var(--primary-color); /* Establece el color de fondo del encabezado utilizando la variable --primary-color */
-    padding: 10px; /* Establece el relleno del encabezado */
-    border-bottom: 1px solid var(--secondary-color); /* Establece un borde inferior utilizando la variable --secondary-color */
+    background-color: var(--primary-color);
+    /* Establece el color de fondo del encabezado utilizando la variable --primary-color */
+    padding: 10px;
+    /* Establece el relleno del encabezado */
+    border-bottom: 1px solid var(--secondary-color);
+    /* Establece un borde inferior utilizando la variable --secondary-color */
 }
 
 .header h1 {
-    margin: 0; /* Elimina el margen superior e inferior del título */
+    margin: 0;
+    /* Elimina el margen superior e inferior del título */
 }
 
 .filter-row {
-    display: flex; /* Establece la visualización flexible para la fila de filtros */
-    justify-content: space-between; /* Distribuye uniformemente los elementos a lo largo del contenedor */
-    align-items: center; /* Centra verticalmente los elementos */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+    display: flex;
+    /* Establece la visualización flexible para la fila de filtros */
+    justify-content: space-between;
+    /* Distribuye uniformemente los elementos a lo largo del contenedor */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan si no caben en una línea */
 }
 
 .filter-group {
-    flex: 1 0 30%; /* Establece la flexibilidad de los elementos de grupo de filtro */
-    margin-bottom: 10px; /* Establece un margen inferior */
-}
-
-.filter-label {
-    display: block; /* Establece los elementos de etiqueta de filtro como bloques */
-    margin-bottom: 5px;/* Establece un margen inferior */
+    flex: 1 0 30%;
+    /* Establece la flexibilidad de los elementos de grupo de filtro */
+    margin-bottom: 10px;
+    /* Establece un margen inferior */
 }
 
 .filter-input {
@@ -56,15 +71,6 @@ body {
     /* Establece el relleno */
     box-sizing: border-box;
     /* Incluye el relleno y el borde en el ancho total */
-}
-
-.input-container {
-    margin-top: 5px;
-    /* Establece un margen superior */
-    display: flex;
-    /* Establece la visualización flexible para el contenedor de entrada */
-    justify-content: space-between;
-    /* Distribuye uniformemente los elementos a lo largo del contenedor */
 }
 
 .filter-actions {
@@ -83,15 +89,6 @@ body {
     /* Establece un margen izquierdo */
 }
 
-.filter-select {
-    width: 100%;
-    /* Establece el ancho al 100% */
-    padding: 5px;
-    /* Establece el relleno */
-    box-sizing: border-box;
-    /* Incluye el relleno y el borde en el ancho total */
-}
-
 .btn {
     padding: 10px 20px;
     /* Establece el relleno */
@@ -103,13 +100,27 @@ body {
     /* Cambia el cursor al pasar el ratón */
 }
 
+/* Agregar estilos para los botones con iconos */
+.btn i {
+    font-size: 1.2em;
+    /* Tamaño de los iconos */
+}
+
 .btn-apply-filters,
+.btn-clear-filters,
+.btn-add-client,
 .btn-edit,
 .btn-activate,
-.btn-deactivate,
-.btn-delete {
+.btn-deactivate {
     background-color: var(--accent-color);
     /* Establece el color de fondo utilizando la variable --accent-color */
+    color: white;
+    /* Establece el color del texto */
+}
+
+.btn-delete {
+    background-color: red;
+    /* Establece un color de fondo rojo */
     color: white;
     /* Establece el color del texto */
 }
@@ -134,9 +145,9 @@ body {
 
 #clientes-table {
     width: 100%;
-    /* Establece el ancho de la tabla al 100% */
     border-collapse: collapse;
-    /* Combina los bordes de las celdas */
+    margin-top: 20px;
+    /* Agregamos un margen en la parte superior de la tabla */
 }
 
 #clientes-table th,
@@ -190,14 +201,15 @@ body {
         cursor: pointer;
         /* Cambia el cursor al pasar el ratón */
     }
+}
 
-    .btn-edit,
-    .btn-activate,
-    .btn-deactivate,
-    .btn-delete {
-        background-color: #2E86C1;
-        /* Establece un color de fondo para los botones de acción */
-        color: white;
-        /* Establece el color del texto */
-    }
+/* Estilos para los iconos */
+.icon-container {
+    display: flex;
+    /* Establece la visualización flexible para el contenedor de iconos */
+}
+
+.icon {
+    margin-right: 5px;
+    /* Establece un margen derecho entre los iconos */
 }

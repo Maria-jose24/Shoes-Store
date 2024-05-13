@@ -7,6 +7,10 @@
     <title>Lista de Clientes - Shoes Store</title>
     <link rel="stylesheet" href="./css/listaClientes.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./js/clientes.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -38,7 +42,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="./listaVenta.html">
                         <img src="./img/ventas.png" alt="Ventas">
                         <span>Ventas</span>
                     </a>
@@ -91,11 +95,12 @@
                 <tr>
                     <th>ID Clientes</th>
                     <th>Tipo Identificación</th>
-                    <th>N° Identificación</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
+                    <th>N° de Documento</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
                     <th>Teléfono</th>
                     <th>Dirección</th>
+                    <th>Correo Electrónico</th>
                     <th>Ciudad</th>
                     <th>Estado</th>
                     <th>Acciones</th>
@@ -106,17 +111,19 @@
                     <td>1</td>
                     <td>DNI</td>
                     <td>12345678</td>
-                    <td>John</td>
-                    <td>Doe</td>
+                    <td>John Sebastian</td>
+                    <td>Doe Caviedes</td>
                     <td>1234567890</td>
                     <td>123 Main St</td>
+                    <td>jhon@gmail.com</td>
                     <td>City</td>
                     <td>Activo</td>
                     <td>
-                        <button class="btn btn-edit" type="button">Editar</button>
-                        <button class="btn btn-activate" type="button">Activar</button>
-                        <button class="btn btn-deactivate" type="button">Desactivar</button>
-                        <button class="btn btn-delete" type="button">Eliminar</button>
+                        <div class="icon-container">
+                            <div class="icon edit-icon"><i class="fas fa-edit" style="color: blue;"></i></div>
+                            <div class="icon delete-icon"><i class="fas fa-trash-alt" style="color: red;"></i></div>
+                            <div class="icon disable-icon"><i class="fas fa-toggle-on" style="color: blue;"></i></div>
+                        </div>
                     </td>
                 </tr>
             </tbody>

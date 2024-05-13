@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Productos - Shoes Store</title>
+    <link rel="stylesheet" href="./css/listaProducto.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/agregarProductos.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="./paginaprincipal.html">
+                <img src="./img/logo.png" alt="Shoes Store">
+                <h2>Shoes Store</h2>
+            </a>
+        </div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./img/dashboard.png" alt="Dashboard">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaClientes.html">
+                        <img src="./img/usuario.png" alt="Clientes">
+                        <span>Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaProducto.html">
+                        <img src="./img/productos.png" alt="Productos">
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./listaVenta.html">
+                        <img src="./img/ventas.png" alt="Ventas">
+                        <span>Ventas</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div id="titulo" class="container py-4">
+            <h2>Crear Productos</h2>
+        </div>
+
+        <!-- Formulario -->
+        <div id="formulario" class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre del Producto:</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="descripcion" class="form-label">Descripción:</label>
+                    <input type="text" class="form-control" name="descripcion" id="descripcion">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="cantidad" class="form-label">Cantidad:</label>
+                    <input type="number" class="form-control" name="cantidad" id="cantidad">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="precio" class="form-label">Precio:</label>
+                    <input type="number" class="form-control" name="precio" id="precio">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="iva" class="form-label">% IVA:</label>
+                    <input type="number" class="form-control" name="iva" id="iva">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="descuento" class="form-label">% Descuento:</label>
+                    <input type="number" class="form-control" name="descuento" id="descuento">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="estado" class="form-label">Estado:</label>
+                    <select class="form-select" id="estado">
+                        <option selected disabled value="">Selecciona el estado:</option>
+                        <option value="">Todos</option>
+                        <option value="ACTIVO">Activo</option>
+                        <option value="INACTIVO">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-auto">
+                    <button class="btn btn-volver btn-separator" onclick="window.location.href='paginaprincipal.html';"
+                        type="button">Volver</button>
+                </div>
+                <div class="col-md-auto">
+                    <button class="btn btn-agregar btn-separator" type="button" onclick="registrarProductos();">Agregar
+                        Producto</button>
+                </div>
+                <div class="col-md-auto">
+                    <button class="btn btn-lista btn-separator" onclick="window.location.href='listaProducto.html';"
+                        type="button">Lista de
+                        Productos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
